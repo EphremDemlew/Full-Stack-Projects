@@ -24,7 +24,7 @@ note over browser:
 The JSON data from server contains
 the new_notes content & the date  
 end note
-server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+server-->browser: [{ content: "yello", date: "2022-06-09T16:51:31.352Z" }, ...]
 
 note over browser:
 browser executes the event handler

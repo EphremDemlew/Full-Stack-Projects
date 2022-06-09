@@ -1,0 +1,14 @@
+title SPA New Note
+browser->server: HTTPS POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: {"message":"note created"}
+note over browser:
+The JSON data from server contains
+the new_notes_spa content & the date  
+end note
+server-->browser: [{ content: "yello", date: "2022-06-09T16:51:31.352Z" }, ...]
+
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
