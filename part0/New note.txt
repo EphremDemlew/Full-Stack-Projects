@@ -1,0 +1,38 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note right of server:
+The Server adds the notes 
+to the existing array 
+and return the html
+end note
+
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+note over browser:
+The JSON data from server contains
+the new_notes content & the date  
+end note
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+
+The Link is as follows
+https://www.websequencediagrams.com/cgi-bin/cdraw?lz=YnJvd3Nlci0-c2VydmVyOiBIVFRQIFBPU1QgaHR0cHM6Ly9zdHVkaWVzLmNzLmhlbHNpbmtpLmZpL2V4YW1wbGVhcHAvbmV3X25vdGUKbm90ZSByaWdodCBvZiAATAcKVGhlIFMAWgUgYWRkcyB0aGUgbm90ZXMgCnRvAAkFZXhpc3RpbmcgYXJyYXkgCmFuZCByZXR1cm4AKAVodG1sCmVuZAAxBQoKAIElBi0tPgCBNgc6IEhUTUwtY29kZQoAgToWR0UAgSMsbWFpbi5jc3MAVhMAEgkAH0lqAE4ZanMKCgCCTAZvdmVyIACBZQgAgVsIIHN0YXJ0cyBleGVjdQCCOAVqcwCBfgZ0aGF0IHJlcXVlc3RzIEpTT04gZGF0YSBmcm9tAIMOByAAgkQLCgCBcEVkYXRhLmpzb24AgR8UVGhlAHEXY29udGFpbnMKAIQQBQCEQQdzABIFZW50ICYAhCgFZGF0ZSAAgSgLAINvElt7ACsIOiAiSFRNTCBpcyBlYXN5IiwAOQU6ICIyMDE5LTA1LTIzIiB9LCAuLi5dAIJCHQCCUgZlAIUpBmV2ZW50IGhhbmRsZXIAglkIbmRlcnMAhUMHdG8gZGlzcGxheQCFIAk&s=default
+
