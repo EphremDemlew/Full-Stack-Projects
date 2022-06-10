@@ -18,7 +18,6 @@ const App = () => {
         <Content part1={part1} exercise1={exercises1} />
       </p>
       <p>
-        {" "}
         <Content part2={part2} exercise2={exercises2} />
       </p>
       <p>
